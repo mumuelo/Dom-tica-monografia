@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domotica</title>
+    <link rel = "stylesheet" href="styles.css">
+    <link rel="icon" href="f542ee10b584b161bb56fbf26396e589.jpg"
+
+</head>
+
+<body>
+    <div class="arriba">
+        <div class="nombre">
+            <h1 class="fuente">pagina de nico :v</h1>
+        </div>
+    </div>
+
+    <div class="cajagrande">
+        <div class="arribaizq">
+            <img src="muñequito.png" alt="muñequito" class="muñequito">
+                        <h1 class="fuente2">
+                           ¿Que es la Domótica?
+                        </h1>
+                        <p class="fuente3">
+La domótica constituye un campo interdisciplinario que integra conocimientos de electrónica, informática, telecomunicaciones y automatización para optimizar la gestión de entornos residenciales. A través de la implementación de sensores, actuadores, 
+unidades de procesamiento y sistemas de control distribuidos, se busca alcanzar niveles superiores de confort, eficiencia energética, seguridad y accesibilidad. Su aplicación se extiende tanto a viviendas individuales como a edificios y complejos habitacionales, marcando una evolución hacia la vivienda inteligente.
+El término domótica proviene de la raíz latina domus (hogar) y de automática. Se define como el conjunto de sistemas capaces de automatizar una vivienda, proporcionando una gestión inteligente de todos sus servicios, ya sea de manera integrada o independiente. Incluye control sobre iluminación, climatización, energía,
+seguridad, multimedia y electrodomésticos, mediante dispositivos conectados y plataformas de gestión.
+                        </p>
+
+                        <h1 class="fuente4">
+                             Componentes fundamentales de un sistema domótico   
+                        </h1>
+                        
+                        <p class="fuente5">
+                            Un sistema domótico operativo se compone por los siguientes elementos:
+                        </p>
+                        <ul class="fuente6">
+                            
+                            <li>Sensores: son elementos esenciales para la adquisición de datos en tiempo real dentro de un sistema domótico. Captan variables físicas del entorno como temperatura, humedad, presencia, nivel de iluminación, concentración de gases, entre otros. Estos dispositivos permiten la percepción automatizada del estado ambiental, actuando como los “ojos” y “oídos” del sistema. Por ejemplo, un sensor DHT22 puede registrar variaciones térmicas y de humedad para regular climatizadores, mientras que un sensor PIR detecta movimiento para activar alarmas o luces. Los sensores de gases como el MQ-2 son utilizados para detectar humo, propano o butano en aplicaciones de seguridad. Las señales generadas por los sensores suelen ser analógicas o digitales, y son transmitidas directamente al controlador.</li>
+                            <br>
+                            <li>Actuadores: dispositivos que ejecutan físicamente las acciones determinadas por la unidad de control. Transforman las señales eléctricas recibidas en movimientos mecánicos, cambios de estado o conmutaciones. Cumplen funciones como abrir o cerrar válvulas, encender luces, accionar mecanismos motorizados o modificar el comportamiento de un dispositivo. Ejemplos comunes incluyen relés electromecánicos para interrumpir o permitir el paso de corriente en circuitos, servomotores que regulan el movimiento de elementos como cortinas automatizadas, y electroválvulas que controlan el flujo de agua o gas. También existen interruptores inteligentes que permiten el control remoto de electrodomésticos desde una app o sistema central.</li>
+                            <br>
+                            <li>Unidad de control: constituye el núcleo lógico del sistema domótico. Es responsable de interpretar los datos de los sensores, procesar la información conforme a una lógica predefinida (algoritmos), y emitir señales de salida hacia los actuadores. Esta función es llevada a cabo por microcontroladores como Arduino o ESP32, que son adecuados para aplicaciones simples, de bajo consumo y locales, o por microprocesadores como Raspberry Pi, capaces de operar con sistemas operativos, gestionar múltiples dispositivos simultáneamente, y ejecutar interfaces gráficas. En configuraciones más complejas, esta unidad puede integrarse con servidores domóticos y plataformas de automatización como Home Assistant, OpenHAB o Node-RED.</li>
+                            <br>
+                            <li>Interfaces de usuario: la interacción entre el sistema domótico y el usuario final. Mediante estas herramientas, el usuario puede monitorear variables del sistema, configurar parámetros, ejecutar comandos manuales y establecer rutinas automatizadas. Las interfaces más comunes incluyen aplicaciones móviles que operan por Wi-Fi o Bluetooth, paneles táctiles empotrados en muros o mobiliarios, asistentes de voz como Google Assistant o Alexa que aceptan comandos verbales, y interfaces web accesibles desde navegadores que muestran dashboards en tiempo real. La eficacia de estas interfaces depende del diseño de la experiencia de usuario, la disponibilidad de conexión, y el nivel de integración con los demás componentes del sistema. </li>
+                            <br>
+                            <li>Sistema de comunicación: El sistema de comunicación conecta todos los componentes del ecosistema domótico, asegurando el flujo constante y confiable de datos entre sensores, actuadores, controladores e interfaces. Esta red puede ser cableada o inalámbrica, y utiliza protocolos específicos según los requerimientos de alcance, velocidad y consumo energético</li>
+                        </ul>
+
+                        <h1 class="fuente7">
+                             Arquitectura de red y protocolo de comunicación:
+                        </h1>
+                        
+                        <p class="fuente8">
+                           En la implementación de sistemas domóticos modernos, la arquitectura de red cumple un papel fundamental al establecer cómo se interconectan los dispositivos, cómo se gestiona la información entre ellos y de qué manera se realiza el control distribuido o centralizado. Dependiendo del nivel de complejidad y escala del sistema, se adoptan diferentes modelos de arquitectura.
+
+Uno de los modelos más comunes es el de tipo cliente-servidor, donde una unidad central (por ejemplo, una Raspberry Pi con software de gestión como Home Assistant) actúa como servidor, recopilando datos de sensores (clientes), procesando la lógica de control y enviando instrucciones a actuadores. Este modelo es eficiente en entornos donde se requiere un control integral y centralizado, permitiendo la gestión global desde una única interfaz.
+
+Por otro lado, en sistemas más descentralizados o distribuidos se emplea una arquitectura peer-to-peer, donde cada nodo puede actuar simultáneamente como emisor y receptor. Esta modalidad es típica de redes en malla como Zigbee, que permiten que los dispositivos se comuniquen entre sí sin depender de un único servidor, mejorando la escalabilidad y reduciendo el impacto ante fallos de conexión.
+
+En cuanto a los protocolos de comunicación, estos definen cómo se transmite la información entre los distintos nodos del sistema. Los más utilizados en el contexto domótico son:
+                        </p>
+
+                        <ul class="fuente6">
+                            <li>MQTT (Message Queue Telemetry Transport): Es un protocolo ligero diseñado específicamente para sistemas de bajo ancho de banda, alta latencia o recursos limitados, como los que se encuentran en dispositivos IoT (Internet de las Cosas). Utiliza un modelo de publicación-suscripción a través de un broker, lo que permite una comunicación eficiente entre múltiples nodos sin necesidad de enlaces directos. Es ideal para aplicaciones donde se requiere transmitir datos como temperaturas, estados de sensores o eventos de forma rápida y segura.</li>
+                            <br>
+                            <li>Zigbee / Z-Wave: Ambos son protocolos inalámbricos optimizados para aplicaciones de automatización residencial. Operan en topología de red en malla, lo que significa que los dispositivos pueden retransmitir señales entre sí, aumentando la cobertura y la resiliencia del sistema. Zigbee se basa en estándares IEEE 802.15.4 y tiene un amplio soporte en dispositivos comerciales. Z-Wave, por su parte, utiliza frecuencias distintas (menor interferencia) y suele tener una mejor compatibilidad entre fabricantes certificados. Ambos ofrecen baja latencia, bajo consumo de energía y alta seguridad mediante encriptación AES.</li>
+                            <br>
+                            <li>KNX (Konnex): Es un estándar europeo ampliamente utilizado en automatización de edificios, especialmente en instalaciones comerciales o profesionales de gran escala. KNX opera sobre una infraestructura cableada, con topología de bus, lo que facilita la conexión de múltiples dispositivos en una única línea de comunicación física. Destaca por su fiabilidad, longevidad del sistema y robustez frente a interferencias. Su programación puede realizarse desde entornos dedicados como ETS, lo que permite un alto grado de personalización.</li>
+                            
+                        </ul>
+
+                        
+
+
+
+                        <h1 class="fuente9">
+                             Tecnologías y plataformas integradoras 
+                        </h1>
+                        
+                        <p class="fuente10">
+                            En el diseño y administración de sistemas domóticos, es fundamental contar con herramientas flexibles y escalables que permitan tanto el control local como la automatización remota de dispositivos. Existen plataformas tecnológicas que actúan como núcleo funcional del sistema, facilitando la comunicación entre sensores, actuadores e interfaces, así como el procesamiento de datos en tiempo real.
+                        </p>
+                        <ul class="fuente11">
+                            <li>Arduino: es una de las opciones más populares a nivel educativo y experimental. Se trata de una placa de desarrollo basada en microcontrolador, cuya arquitectura abierta permite modificar y programar libremente sus funciones. Su principal ventaja reside en la simplicidad y bajo costo, lo que lo convierte en una solución ideal para tareas puntuales como el control de luces, regulación de temperatura o monitoreo de humedad. Los módulos como el Arduino UNO o Nano pueden operar sensores digitales y analógicos, accionar relés, emitir señales PWM y comunicarse mediante protocolos básicos como I2C, SPI o UART. Sin embargo, debido a sus limitaciones en procesamiento y conectividad nativa, su uso suele estar orientado a aplicaciones individuales o en conjunto con plataformas superiores.</li>
+                            <br>
+                            <li>Raspberry Pi: es una computadora de placa reducida que corre sistemas operativos completos (como Linux o Raspberry Pi OS) y permite ejecutar software avanzado de automatización y visualización. Gracias a su capacidad para conectarse a redes Wi-Fi, ejecutar servidores web, procesar imágenes de cámaras IP y administrar bases de datos, se utiliza comúnmente como centro de control domótico. Puede funcionar como servidor MQTT, alojar plataformas como Home Assistant, e integrarse con asistentes de voz o servicios en la nube. Dispone de puertos GPIO para interactuar directamente con dispositivos electrónicos, lo que lo convierte en una solución híbrida entre control físico y gestión digital centralizada.</li>
+                            <br>
+                            <li>Home Assistant / Domoticz / OpenHAB: permiten orquestar de manera inteligente todos los dispositivos conectados. Se caracterizan por ofrecer interfaces gráficas intuitivas, automatización basada en eventos, temporizadores, condiciones lógicas y compatibilidad con múltiples marcas y tecnologías (Zigbee, Z-Wave, Wi-Fi, Bluetooth, entre otras). Estas plataformas pueden ejecutarse en Raspberry Pi, servidores dedicados o incluso en contenedores virtuales, y brindan herramientas para crear dashboards personalizados, registrar históricos de sensores, recibir notificaciones y programar acciones automáticas en función de condiciones dinámicas.</li>
+                            
+                        </ul>
+
+
+
+                        <h1 class="fuente12">
+                             Aplicaciones prácticas
+                        </h1>
+                        
+                        <p class="fuente13">
+                            Las aplicaciones de la domótica abarcan un espectro amplio de funcionalidades que responden tanto a necesidades técnicas como a criterios de calidad de vida, eficiencia operativa y sostenibilidad. Su implementación en entornos residenciales permite transformar espacios convencionales en sistemas inteligentes que actúan de forma autónoma o personalizada según las condiciones del entorno y las preferencias del usuario.
+                        </p>
+                        <ul class="fuente14">
+                            <li>Gestión energética: Uno de los pilares de la domótica es la optimización del consumo energético. Mediante sensores y temporizadores, es posible regular el uso de iluminación artificial en función de la luminosidad ambiental o la presencia de personas en el recinto. Asimismo, el sistema puede controlar la climatización, ajustando automáticamente calefactores, aires acondicionados o ventiladores según la temperatura y humedad del ambiente. La automatización de electrodomésticos permite desconectarlos en horarios críticos o cuando no se detecta uso, lo cual se traduce en una reducción significativa del gasto eléctrico mensual. Algunos sistemas incluso gestionan el uso de energía solar doméstica y monitorean el consumo mediante gráficas en tiempo real.</li>
+                            <br>
+                            <li>Seguridad activa y pasiva: La domótica tiene un fuerte impacto en la seguridad del hogar, tanto en su modalidad activa como pasiva. Los sistemas de videovigilancia pueden integrarse con cámaras IP, sensores de movimiento y grabación programada para proteger zonas sensibles. El control de accesos mediante cerraduras electrónicas, tarjetas RFID o autenticación biométrica evita intrusiones. A nivel perimetral, se emplean sensores infrarrojos, magnéticos o láser para detectar aperturas o movimientos en puertas y ventanas. Además, la simulación de presencia (activación aleatoria de luces o dispositivos) disuade el ingreso de personas no autorizadas durante ausencias prolongadas.</li>
+                            <br>
+                            <li>Control ambiental: La regulación del ambiente interno es otro ámbito clave. Mediante sensores de temperatura, CO₂, humedad y partículas en suspensión, los sistemas domóticos ajustan automáticamente la ventilación, activan purificadores de aire o modifican el régimen de calefacción. Esto garantiza un clima interno saludable y confortable. En entornos con plantas o cultivos domésticos, el sistema puede controlar la humedad del suelo y activar sistemas de riego autónomo para mantener las condiciones ideales.</li>
+                            <br>
+                            <li>Accesibilidad y asistencia: La automatización residencial tiene gran potencial para mejorar la calidad de vida de personas mayores, con discapacidad motriz o cognitiva. Gracias a las interfaces adaptadas (como comandos de voz, controles simplificados, sensores de proximidad), el usuario puede ejecutar acciones cotidianas sin desplazarse físicamente. Esto incluye encender luces, abrir puertas, ajustar la temperatura o acceder a asistencia remota. Los sistemas pueden incorporar alertas médicas, detección de caídas o monitoreo de ritmo cardíaco para brindar soporte preventivo o reactivo en tiempo real. </li>
+                            <br>
+                            <li>Confort personalizado: Finalmente, uno de los atributos más valorados de la domótica es la capacidad de generar entornos personalizados. El usuario puede configurar rutinas automatizadas, como “modo noche”, “modo trabajo” o “modo cine”, que ajustan simultáneamente la iluminación, el sonido ambiental, las cortinas y los dispositivos multimedia. Las escenas pueden activarse por horario, presencia, condiciones climáticas o incluso mediante asistentes virtuales. Esta integración entre sistemas permite una experiencia fluida y adaptada al estilo de vida individual.</li>
+                            
+                        </ul>
+
+
+                        
+                        <h1 class="fuente15">
+                             Ventajas Tecnicas
+                        </h1>
+                        
+                        <p class="fuente16">
+                            La implementación de sistemas domóticos en viviendas modernas ofrece múltiples beneficios que se traducen en mejoras tangibles en eficiencia operativa, calidad de vida, sostenibilidad y seguridad. Estas ventajas derivan de la capacidad que tiene la domótica de integrar distintos subsistemas mediante control automatizado, procesamiento inteligente de señales y monitoreo constante de variables ambientales. A continuación se detallan sus principales atributos técnicos:
+                        </p>
+                        <ul class="fuente17">
+                            <li>Eficiencia energética: permite una administración inteligente del consumo eléctrico, térmico e hidráulico, gracias al uso de sensores ambientales y algoritmos de control adaptativo. Por ejemplo, los sistemas pueden apagar automáticamente luces en espacios desocupados, ajustar la climatización según la temperatura exterior o distribuir la carga energética de manera uniforme para evitar picos de consumo. Esta optimización se traduce en una reducción significativa de los gastos operativos mensuales y una menor huella de carbono, haciendo que la vivienda sea más sostenible.</li>
+                            <br>
+                            <li>Interactividad: A través de interfaces como aplicaciones móviles, asistentes de voz o paneles táctiles, el usuario puede monitorear el estado del sistema, modificar parámetros y activar dispositivos desde cualquier ubicación. Esta conectividad permanente permite una gestión activa y dinámica del entorno, así como una respuesta inmediata ante eventos o necesidades específicas.</li>
+                            <br>
+                            <li>Seguridad integral: La integración de sensores de movimiento, cámaras IP, detectores de apertura, alarmas y protocolos de alerta temprana permite configurar sistemas de seguridad altamente efectivos. Los sistemas domóticos pueden actuar de forma preventiva, enviando notificaciones ante la detección de situaciones anómalas, simulando presencia durante ausencias prolongadas o incluso activando mecanismos de bloqueo físico. Todo esto se realiza de forma automatizada o con intervención remota del usuario, contribuyendo a la protección de bienes y personas.</li>
+                            <br>
+                            <li>Escalabilidad: Una ventaja fundamental de la arquitectura domótica moderna es su capacidad de expansión progresiva. Los sistemas están diseñados para integrar nuevos módulos o dispositivos sin necesidad de reconfigurar completamente la instalación existente. Gracias al uso de protocolos abiertos como MQTT, Zigbee o Z-Wave, es posible sumar sensores, actuadores o controladores de distintos fabricantes, adaptándose a las necesidades del usuario y al crecimiento del hogar. </li>
+                            <br>
+                            <li>Adaptabilidad: Los sistemas domóticos presentan una alta capacidad de adaptación a contextos variables. Pueden modificar su comportamiento ante cambios de clima, presencia de personas, hora del día o incluso según rutinas personalizadas del usuario. Esta inteligencia contextual permite que el sistema responda de forma automática a las condiciones reales del entorno, generando ambientes cómodos, seguros y eficientes sin requerir intervención constante.</li>
+                            
+                        </ul>
+
+                        
+                        <h1 class="fuente18">
+                             Limitaciones y consideraciones
+                        </h1>
+                        
+                        <p class="fuente19">
+                            A pesar de sus beneficios, la domótica presenta ciertos desafíos técnicos:
+                        </p>
+                        <ul class="fuente20">
+                            <li>Uno de los principales obstáculos es el alto costo de implementación, sobre todo en instalaciones centralizadas, profesionales o de gran escala. Este gasto incluye no solo el valor de los sensores, actuadores y controladores, sino también los servicios de diseño, configuración, instalación y mantenimiento. La inversión puede ser particularmente significativa si se opta por marcas reconocidas, sistemas cableados o integración con otras infraestructuras tecnológicas del edificio. Aunque existen opciones más accesibles basadas en plataformas libres como Arduino o Raspberry Pi, requieren conocimiento técnico avanzado y no siempre garantizan estabilidad a largo plazo.</li>
+                            <br>
+                            <li>interoperabilidad: El mercado ofrece una amplia variedad de dispositivos de diferentes fabricantes, cada uno con sus propios protocolos, estándares de comunicación y ecosistemas cerrados. Esto puede dificultar la integración entre módulos domóticos, especialmente si no comparten un lenguaje común como MQTT, Zigbee o KNX. Para lograr una instalación eficiente y expandible, es fundamental seleccionar dispositivos que trabajen bajo protocolos abiertos, o emplear plataformas de automatización que faciliten la compatibilidad entre marcas y tecnologías.</li>
+                            <br>
+                            <li>Dependencia de la conectividad: Los sistemas domóticos dependen fuertemente de la conectividad, ya sea a nivel local (LAN/Wi-Fi) o externo (Internet). En entornos con señal débil, interferencias o cortes de red, la funcionalidad puede verse comprometida. Por ejemplo, un sistema de control de climatización que depende de una aplicación móvil remota no podrá operar correctamente si la conexión falla. Por eso, muchas instalaciones combinan módulos autónomos con comunicación local y respaldo manual, para garantizar continuidad de funcionamiento ante contingencias.</li>
+                            <br>
+                            <li>Seguridad informática y privacidad: En la era del Internet de las Cosas (IoT), cada dispositivo conectado representa un posible punto de entrada para accesos no autorizados. La seguridad informática es un aspecto clave en cualquier instalación domótica, ya que vulnerabilidades en la red pueden poner en riesgo datos personales, accesos físicos (como cerraduras inteligentes) e incluso generar ataques a la infraestructura eléctrica o de vigilancia. Es imprescindible implementar medidas como encriptación de datos, autenticación de usuarios, actualizaciones constantes de firmware y segmentación de red para proteger el entorno digital del hogar.</li>
+                            <br>
+                            
+                            
+                        </ul>
+
+
+
+                        <h1 class="fuente21">
+                            Conclusion 
+                        </h1>
+                        
+                        <p class="fuente22">
+                            La domótica representa un paso esencial hacia la evolución de los entornos habitacionales modernos. Permite transformar viviendas tradicionales en ecosistemas inteligentes, interactivos y adaptativos, mejorando la calidad de vida de los usuarios. Su desarrollo está estrechamente vinculado al avance de la tecnología IoT, la miniaturización de dispositivos, la proliferación de redes inalámbricas y la expansión de plataformas abiertas. A medida que se reducen los costos de implementación y se amplía la oferta de dispositivos compatibles, la domótica se convierte en una solución viable para el diseño de hogares más eficientes, seguros y conectados.
+                        </p>
+                        
+
+
+                                                <h1 class="fuente23">
+                             Bibliografia 
+                        </h1>
+                        
+                        <ul class="fuente25">
+                            <ul>
+                            <li><a href="https://www.redalyc.org/pdf/5075/507550790007.pdf" target="_blank">https://www.redalyc.org/pdf/5075/507550790007.pdf</a></li>
+                            <br>
+                            <li><a href="https://www.knx.org/knx-en/for-professionals/index.php" target="_blank">https://www.knx.org/knx-en/for-professionals/index.php</a></li>
+                            <br>
+                            <li><a href="https://www.raspberrypi.com" target="_blank">https://www.raspberrypi.com</a></li>
+                            <br>
+                            <li><a href="https://books.google.com.ar/books/about/Manual_de_domótica.html?id=V6IzqqDcfF8C&redir_esc=y" target="_blank">https://books.google.com.ar/books/about/Manual_de_domótica.html?id=V6IzqqDcfF8C&redir_esc=y</a></li>
+                            <br>
+                            <li><a href="https://repositorio.upct.es/bitstreams/b7381e9a-6d28-4d59-b503-265bfdfa077b/download" target="_blank">https://repositorio.upct.es/bitstreams/b7381e9a-6d28-4d59-b503-265bfdfa077b/download</a></li>
+                            </ul>
+                        </ul>
+        </div>
+        
+
+        
+    </div>
+
+
+
+</body>
+</html>
